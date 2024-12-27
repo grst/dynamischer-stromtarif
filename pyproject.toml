@@ -1,0 +1,14 @@
+[project]
+name = "dynamischer-stromtarif"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "holoviews>=1.20.0",
+    "jupyter>=1.1.1",
+    "pandas>=2.2.3",
+    "quarto>=0.1.0",
+    "requests>=2.32.3",
+    "ruff>=0.8.4",
+]
