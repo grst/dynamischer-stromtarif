@@ -1,3 +1,8 @@
+# Vergleich von dynamischem Stromtarif mit Fixpreistarif anhang realer Verbrauchsdaten. 
+
+Link zum vollständigen Artikel: 
+https://grst.github.io/dynamischer-stromtarif/dynamischer-stromtarif.html
+
 ## Datenquellen
 
  * Awattar API
