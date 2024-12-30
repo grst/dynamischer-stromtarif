@@ -20,13 +20,14 @@ jobs:
 
       - name: Render notebook to HTML
         run: |
-          uv run quarto render dynamischer-stromtarif.ipynb --to html --self-contained
+          uv run quarto render dynamischer-stromtarif.ipynb --to html --self-contained && \
+          mkdir -p _build && mv dynamischer-stromtarif.html _build
 
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-            path: dynamischer-stromtarif.html
+            path: _build
         
   deploy:
     environment:
