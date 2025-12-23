@@ -20,8 +20,14 @@ jobs:
 
       - name: Render notebook to HTML
         run: |
-          uv run quarto render dynamischer-stromtarif.ipynb --to html --self-contained && \
-          mkdir -p _build && mv dynamischer-stromtarif.html _build
+          cd src && \
+          for f in *.ipynb; do
+            uv run quarto render $f --to html --self-contained 
+          done 
+          
+      - name: Copy notebooks to destination folder
+        run: | 
+          mkdir -p _build && mv src/*.html _build
 
       - name: Upload static files as artifact
         id: deployment
